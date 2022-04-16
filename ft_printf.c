@@ -17,6 +17,8 @@ const char	*ft_search_arg(va_list arg, const char *format, t_lw *sc)
 		else if (*format == 'X')
 			sc->len += ft_puthex(va_arg(arg, int), 'X');
 	}
+	// else if (*format == 'p')
+	// 	sc->len += ;
 	return (format);
 }
 

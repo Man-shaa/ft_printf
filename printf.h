@@ -11,11 +11,11 @@ typedef struct	t_lw
 	int width;
 }				t_lw;
 
+int				ft_putchar(char c);
 char			*ft_strrchr(const char *format);
 int				ft_intlen(int n);
 int				ft_strlen(const char *str);
 
-int				ft_putchar(char c);
 int				ft_putstr(char *str);
 int				ft_putnbr(int nb);
 unsigned int	ft_putnbr_unsigned(unsigned int nb);

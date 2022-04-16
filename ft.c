@@ -1,5 +1,11 @@
 #include "printf.h"
 
+int	ft_putchar(char c)
+{
+	write(1, &c, 1);
+	return (write(1, &c, 1));
+}
+
 char	*ft_strrchr(const char *format)
 {
 	while (*format)
