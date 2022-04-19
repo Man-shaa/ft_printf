@@ -1,32 +1,42 @@
-NAME =	libftprintf.a
+NAME 		=	libftprintf.a
 
-SRCS =	ft_putchar.c ft_strrchr.c ft_intlen.c ft_strlen.c \
-		ft_putstr.c ft_putnbr.c ft_putnbr_unsigned.c \
-		ft_puthex.c ft_search_arg.c ft_read_text.c ft_printf.c
+FLAGS		= -Wall -Wextra -Werror
 
-OBJS =	${SRCS .c=.o}
+CONV_DIR	= conversion/
 
-CC = gcc
+FT_DIR		= ft_utile/
 
-RM =	rm -f
+SRCS 		=	${FT_DIR}ft_putchar.c			\
+				${FT_DIR}ft_strrchr.c			\
+				${FT_DIR}ft_intlen.c 			\
+				${FT_DIR}ft_strlen.c 			\
+				${CONV_DIR}ft_putstr.c			\
+				${CONV_DIR}ft_putnbr.c			\
+				${CONV_DIR}ft_putnbr_unsigned.c	\
+				${CONV_DIR}ft_puthex.c			\
+				ft_printf.c
 
-FLAGS =	-Wall -Wextra -Werror
+OBJS 		= ${SRCS .c=.o}
 
-all : ${NAME}
+CC			= gcc
 
-.c.o :
-	${CC} ${FLAGS} .c $< .o ${<:.c=.o}
+RM			= rm -f
 
-${NAME} :	${OBJS}
+all: ${NAME}
+
+.c.o:
+	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+
+${NAME}:	${OBJS}
 	ar rc ${NAME} ${OBJS}
 	ranlib ${NAME}
 
-clean :
+clean:
 	${RM} ${OBJS}
 
-fclean : clean
+fclean: clean
 	${RM} ${NAME}
 
-re : fclean all
+re: fclean all
 
-.PHONY : re all clean fclean
+.PHONY: re all clean fclean

@@ -116,7 +116,7 @@ int	main(void)
 	printf("Hello %i\n\n", 'j');
 
 	ft_printf("Hello %i\n", 123456789);
-	ft_printf("Hello %i\n\n", 123456789);
+	printf("Hello %i\n\n", 123456789);
 
 	ft_printf("%c%%%c\n", 'A', 'B');
 	printf("%c%%%c\n\n", 'A', 'B');
