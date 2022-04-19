@@ -22,7 +22,6 @@ unsigned int	ft_putnbr_unsigned(unsigned int nb);
 int				ft_puthex(int n, char c);
 
 const char		*ft_search_arg(va_list arg, const char *format, t_lw *sc);
-const char		*ft_search_arg2(va_list arg, const char *format, t_lw *sc);
 const char		*ft_read_text(t_lw *sc, const char *format);
 int				ft_printf(const char *format, ...);
 
