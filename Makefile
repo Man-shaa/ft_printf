@@ -6,6 +6,8 @@ SRCS =	ft_putchar.c ft_strrchr.c ft_intlen.c ft_strlen.c \
 
 OBJS =	${SRCS .c=.o}
 
+CC = gcc
+
 RM =	rm -f
 
 FLAGS =	-Wall -Wextra -Werror
@@ -13,7 +15,7 @@ FLAGS =	-Wall -Wextra -Werror
 all : ${NAME}
 
 .c.o :
-	gcc ${FLAGS} .c $< .o ${<:.c=.o}
+	${CC} ${FLAGS} .c $< .o ${<:.c=.o}
 
 ${NAME} :	${OBJS}
 	ar rc ${NAME} ${OBJS}
