@@ -1,4 +1,4 @@
-NAME 		=	libftprintf.a
+NAME 		= libftprintf.a
 
 FLAGS		= -Wall -Wextra -Werror
 
@@ -14,6 +14,7 @@ SRCS 		=	${FT_DIR}ft_putchar.c			\
 				${CONV_DIR}ft_putnbr.c			\
 				${CONV_DIR}ft_putnbr_unsigned.c	\
 				${CONV_DIR}ft_puthex.c			\
+				${CONV_DIR}ft_puthex_maj.c			\
 				ft_printf.c
 
 OBJS 		= ${SRCS .c=.o}

@@ -1,6 +1,6 @@
 #include "../printf.h"
 
-int	ft_intlen(int n)
+int	ft_intlen(long int n)
 {
 	int	i;
 

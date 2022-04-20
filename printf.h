@@ -13,13 +13,15 @@ typedef struct	t_lw
 
 int				ft_putchar(char c);
 char			*ft_strrchr(const char *format);
-int				ft_intlen(int n);
+int				ft_intlen(long int n);
+int				ft_unsigned_intlen(unsigned int n);
 int				ft_strlen(const char *str);
 
-int				ft_putstr(char *str);
+int				ft_putstr(char *str, t_lw *sc);
 int				ft_putnbr(int nb);
 unsigned int	ft_putnbr_unsigned(unsigned int nb);
-int				ft_puthex(int n, char c);
+int				ft_puthex(int n);
+int				ft_puthex_maj(int n);
 
 const char		*ft_search_arg(va_list arg, const char *format, t_lw *sc);
 const char		*ft_read_text(t_lw *sc, const char *format);

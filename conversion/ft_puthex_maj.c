@@ -1,12 +1,12 @@
 #include "../printf.h"
 
-int	ft_puthex(int n)
+int	ft_puthex_maj(int n)
 {
 	int		i;
 	int		tmp;
 	char	*base;
 
-	base = "0123456789abcdef";
+	base = "0123456789ABCDEF";
 	i = 0;
 	tmp = n;
 	while (tmp)
@@ -16,7 +16,7 @@ int	ft_puthex(int n)
 	}
 	if (n >= 16)
 	{
-		ft_puthex(n / 16);
+		ft_puthex_maj(n / 16);
 		ft_putchar(base[n % 16]);
 	}
 	ft_putchar(base[n]);
