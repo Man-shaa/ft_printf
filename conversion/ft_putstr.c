@@ -1,20 +1,23 @@
 #include "../printf.h"
 
-int	ft_putstr(char *str, t_lw *sc)
+int	ft_putstr(char *str)
 {
 	int	i;
+	int	len;
 
+	len = 0;
 	i = 0;
 	if (!str)
 	{
 		write(1, "(null)", 6);
-		sc->len += 6;
-		return (0);
+		len = 6;
+		return (len);
 	}
-	while (str[i])
+	while (*str)
 	{
-		write(1, &str[i], 1);
-		i++;
+		write(1, str, 1);
+		str++;
+		len++;
 	}
-	return (i);
+	return (len);
 }

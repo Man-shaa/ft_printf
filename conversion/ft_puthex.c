@@ -1,24 +1,18 @@
 #include "../printf.h"
 
-int	ft_puthex(int n)
+int	ft_puthex(unsigned long long n, char *base)
 {
-	int		i;
-	int		tmp;
-	char	*base;
+	int	i;
+	int	len;
 
-	base = "0123456789abcdef";
-	i = 0;
-	tmp = n;
-	while (tmp)
+	i = ft_strlen(base);
+	len = 0;
+	if (n / i == 0)
 	{
-		tmp /= 16;
-		i++;
+		len += ft_putchar(base[n % i]);
+		return (len);
 	}
-	if (n >= 16)
-	{
-		ft_puthex(n / 16);
-		ft_putchar(base[n % 16]);
-	}
-	ft_putchar(base[n]);
-	return (i);
+	len += ft_puthex((n / i), base);
+	len += ft_putchar(base[n % i]);
+	return (len);
 }
