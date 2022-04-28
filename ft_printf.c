@@ -67,7 +67,7 @@ int	main(void)
 	char			c = 'M';
 	char			*s2 = NULL;
 	unsigned int	ui_max = 4294967295;
-	int				i_min = -2147483647;
+	int				i_min = -23;
 
 	// printf("%d\n", ft_printf(""));
 	printf("	: %d\n", ft_printf("Random int : %i", 123456789));
