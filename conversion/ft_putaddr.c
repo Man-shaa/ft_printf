@@ -1,8 +1,8 @@
 #include "../printf.h"
 
-int ft_putaddr(unsigned long long int n)
+int ft_putaddr(unsigned int n)
 {
-    int len;
+    unsigned int len;
 
     len = 0;
     if (!n)

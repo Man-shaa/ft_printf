@@ -17,7 +17,7 @@ SRCS 		=	${FT_DIR}ft_putchar.c			\
 				${CONV_DIR}ft_putaddr.c			\
 				ft_printf.c
 
-OBJS 		= ${SRCS .c=.o}
+OBJS 		= ${SRCS:.c=.o}
 
 CC			= gcc
 
@@ -30,7 +30,6 @@ all: ${NAME}
 
 ${NAME}:	${OBJS}
 	ar rc ${NAME} ${OBJS}
-	ranlib ${NAME}
 
 clean:
 	${RM} ${OBJS}

@@ -2,16 +2,17 @@
 
 int	ft_putnbr(int n)
 {
-	int				len;
+	unsigned int	len;
 	unsigned int	unsnb;
 
-	unsnb = n;
 	len = 0;
 	if (n < 0)
 	{
 		len += ft_putchar('-');
-		unsnb = -n;
+		unsnb = -(unsigned int)n;
 	}
+	else
+		unsnb = (unsigned int)n;
 	if (unsnb > 9)
 		len += ft_putnbr(unsnb / 10);
 	len += ft_putchar((unsnb % 10) + 48);
