@@ -1,8 +1,20 @@
-#include "../printf.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/06 15:27:14 by msharifi          #+#    #+#             */
+/*   Updated: 2022/05/06 15:27:14 by msharifi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../ft_printf.h"
 
 int	ft_puthex(unsigned int n, char *base)
 {
-	unsigned int	i;
+	unsigned long	i;
 	int				len;
 
 	i = ft_strlen(base);

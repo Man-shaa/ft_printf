@@ -1,9 +1,21 @@
-#include "../printf.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_unsigned.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/06 15:27:18 by msharifi          #+#    #+#             */
+/*   Updated: 2022/05/06 15:27:18 by msharifi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../ft_printf.h"
 
 unsigned int	ft_putnbr_unsigned(unsigned int nb)
 {
 	unsigned int	i;
-	int 			len;
+	int				len;
 
 	i = nb;
 	len = 0;
