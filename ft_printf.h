@@ -26,7 +26,6 @@ typedef struct s_lw
 int				ft_putchar(char c);
 char			*ft_strrchr(const char *format);
 int				ft_intlen(long int n);
-int				ft_unsigned_intlen(unsigned int n);
 int				ft_strlen(const char *str);
 
 int				ft_putstr(char *str);

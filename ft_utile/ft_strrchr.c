@@ -20,5 +20,5 @@ char	*ft_strrchr(const char *format)
 			return ((char *)format);
 		format++;
 	}
-	return (0);
+	return (NULL);
 }
